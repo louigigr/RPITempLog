@@ -14,4 +14,4 @@ chmod +x PiTempLogger.sh
 ./PiTempLogger.sh
 ```
 ### No special dependencies on RPI3
-*This script has been tested on a **RPI3** running **RetroPie** 4.4.38-v7+ #938 SMP armv71 GNU/Linux
+*This script has been tested on a __RPI3__ running __RetroPie__ 4.4.38-v7+ #938 SMP armv71 GNU/Linux
