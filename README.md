@@ -1,6 +1,6 @@
 To install:
 Clone the repository using git:
-git clone https://github.com/louigigr/RPITempLog
+git clone https://github.com/louigigr/RPITempLog.git
 cd RPITempLog
 chmod +x PiTempLogger.sh
 
