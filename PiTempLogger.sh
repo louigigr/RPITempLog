@@ -6,6 +6,20 @@ echo -e "temp" >$OUTPUT
 #LogFilename=$(<$OUTPUT)
 #rm -rf $OUTPUT
 #>$OUTPUT
+#function removeActiveLog {
+	#LogToRemove=$(<$OUTPUT)
+	#read -p "Remove Existing Logs? (Y/N) " AnswerRemove
+	#if [ "$AnswerRemove" = "Y" ] || [ "$AnswerRemove" = "y" ] ; then
+	#rm -rf "$LogToRemove"
+	#performLog
+	#elif [ "$AnswerRemove" = "N" ] || [ "$AnswerRemove" = "n" ] ; then 
+	#performLog
+	#else
+	#echo -e "Please press Y/y for Yes or N/n for No!!\e"
+	#removeActiveLog
+	#fi
+	
+	#}
 function cleanQuit {
 	read -p "Keep Logs? " keepLogs
 	if [ "$keepLogs" = "Y" ] || [ "$keepLogs" = "y" ] ; then
@@ -26,16 +40,15 @@ function setLogFilename {
 	}
 function viewLog {
 	LogFile=$(<$OUTPUT)
-	cat $LogFile.tlog | less
+	LogPrefix=$(ls -t $LogFile* | grep tlog | head -1)
+	clear
+	cat $LogPrefix | less
 	mainmenu
 	}
 function performLog {
 	COUNTER=0
-	ShowTime=0
 	LogFilename=$(<$OUTPUT)
-	#if [ ! -f $LogFilename ]; then
-    	#echo "File not found!"
-	#fi
+	current_time=$(date "+%Y.%m.%d-%H.%M.%S")
 	read -p "Set Log Total Time: " LogTotalTime
 	read -p "Set Log Period: " LogPeriod
 	#for i in {16..21} {21..16} ;
@@ -47,7 +60,7 @@ function performLog {
 	#echo -e "Current Time is"
 	echo -e "Temperature at \e[104m$COUNTER\e[49m seconds is \e[41m$myout\xC2\xB0C\e[49m "
 	echo -e "Waiting $LogPeriod second(s)"
-	echo -e "$COUNTER \t $myout" >> $LogFilename.tlog
+	echo -e "$COUNTER \t $myout" >> $LogFilename.$current_time.tlog
 	sleep $LogPeriod
 	let COUNTER=COUNTER+$LogPeriod
 	done
