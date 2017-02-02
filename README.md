@@ -38,3 +38,5 @@ Upon running the script you will be presented with a menu. This is the place whe
 
 ### Tested on:
 *This script has been tested on a __RPI3__ running __RetroPie__ 4.4.38-v7+ #938 SMP armv71 GNU/Linux
+### License
+Released under the [GPLv3](https://raw.githubusercontent.com/louigigr/RPITempLog/master/LICENSE) license .
