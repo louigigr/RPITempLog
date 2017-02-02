@@ -20,8 +20,8 @@ function cleanQuit {
 	}
 function setLogFilename {
 	
-	dialog --title "Inputbox - To take input from you" --backtitle "Linux Shell Script Tutorial Example" \
-	--inputbox "Enter your name " 8 60 2>$OUTPUT
+	dialog --title "Temperature Logger" --backtitle "Temperature Logger" \
+	--inputbox "Enter log filename " 8 60 2>$OUTPUT
 	mainmenu
 	}
 function viewLog {
