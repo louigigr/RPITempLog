@@ -42,7 +42,7 @@ function viewLog {
 	LogFile=$(<$OUTPUT)
 	LogPrefix=$(ls -t $LogFile* | grep tlog | head -1)
 	if [ -z "$LogPrefix" ]
-		then
+		then 
 		echo "Log file does not exist."
 		mainmenu
 	else
