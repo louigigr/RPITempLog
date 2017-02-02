@@ -29,10 +29,13 @@ function viewLog {
 	cat $LogFile.tlog | less
 	mainmenu
 	}
-function performLog {	
+function performLog {
 	COUNTER=0
 	ShowTime=0
 	LogFilename=$(<$OUTPUT)
+	#if [ ! -f $LogFilename ]; then
+    	#echo "File not found!"
+	#fi
 	read -p "Set Log Total Time: " LogTotalTime
 	read -p "Set Log Period: " LogPeriod
 	#for i in {16..21} {21..16} ;
