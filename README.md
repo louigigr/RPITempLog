@@ -40,7 +40,7 @@ __To install dialog type:__
 sudo apt-get install dialog
 ```
 
-# Installation
+# Installing from source
 
 ### Clone the repository using git:
 
