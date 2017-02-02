@@ -41,9 +41,16 @@ function setLogFilename {
 function viewLog {
 	LogFile=$(<$OUTPUT)
 	LogPrefix=$(ls -t $LogFile* | grep tlog | head -1)
-	clear
-	cat $LogPrefix | less
-	mainmenu
+	if [ -z "$LogPrefix" ]
+		then
+		echo "Log file does not exist."
+		mainmenu
+	else
+		clear
+		cat $LogPrefix | less
+		mainmenu
+	fi
+	
 	}
 function performLog {
 	COUNTER=0
@@ -68,6 +75,7 @@ function performLog {
 	mainmenu	
 	}
 function mainmenu {
+	LogFilename=$(<$OUTPUT)
 	HEIGHT=15
 	WIDTH=40
 	CHOICE_HEIGHT=5
