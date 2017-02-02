@@ -2,6 +2,15 @@
 This is a simple Bash script to log the temperature of your Raspberry PI. You can install it from source or you can download and execute the latest binary.
 ### v0.1-lw
 [Download Latest Version](https://github.com/louigigr/RPITempLog/releases/download/v0.1-lw/PiTempLogger.x)
+#### Binary Execution
+In order to execute the latest binary you need to make the file executable
+```
+chmod +x PiTempLogger.x
+```
+Binary execution need __superuser__ rights
+```
+sudo ./PiTempLogger.x
+```
 ### Dependencies
 It should run on any system that has *vcgencmd* and *dialog* installed
 
