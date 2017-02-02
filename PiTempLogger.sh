@@ -20,7 +20,7 @@ function cleanQuit {
 	}
 function setLogFilename {
 	
-	dialog --title "Temperature Logger" --backtitle "Temperature Logger" \
+	dialog --title "Input Box" --backtitle "Temperature Logger" \
 	--inputbox "Enter log filename " 8 60 2>$OUTPUT
 	mainmenu
 	}
