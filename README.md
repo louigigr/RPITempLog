@@ -1,5 +1,7 @@
 # Description
-This is a simple Bash script to log the temperature of your Raspberry PI
+This is a simple Bash script to log the temperature of your Raspberry PI. You can install it from source or you can download and execute the latest binary.
+### v0.1-lw
+[Download Latest Version](https://github.com/louigigr/RPITempLog/releases/download/v0.1-lw/PiTempLogger.x)
 ### Dependencies
 It should run on any system that has *vcgencmd* and *dialog* installed
 
@@ -40,3 +42,4 @@ Upon running the script you will be presented with a menu. This is the place whe
 *This script has been tested on a __RPI3__ running __RetroPie__ 4.4.38-v7+ #938 SMP armv71 GNU/Linux
 ### License
 Released under the [GPLv3](https://raw.githubusercontent.com/louigigr/RPITempLog/master/LICENSE) license .
+
