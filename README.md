@@ -7,7 +7,7 @@ In order to execute the latest binary you need to make the file executable
 ```
 chmod +x PiTempLogger.x
 ```
-Binary execution need __superuser__ rights
+Binary execution needs __superuser__ rights
 ```
 sudo ./PiTempLogger.x
 ```
